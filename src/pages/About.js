@@ -140,7 +140,7 @@ const About = () => (
               skills. A self-motivated, quick learner and a good team player.
             </PText>
           </div>
-          <Button btnText="Download CV" btnLink="#" />
+          <Button btnText="Download CV" btnLink="#" download />
         </div>
         <div className="right">
           <img src={aboutImg} alt="aboutImg" />
