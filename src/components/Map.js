@@ -22,7 +22,7 @@ const MapStyled = styled.div`
       padding: 2rem;
       background-color: var(--deep-dark);
       width: 100%;
-      max-width: 300px;
+      max-width: 340px;
       border-radius: 12px;
       @media only screen and (max-width: 400px) {
         background-position: 80% center;
@@ -51,7 +51,7 @@ const Map = () => (
     <div className="container">
       <div className="map__card">
         <h3 className="map__card__heading">Here is me</h3>
-        <PText>314/88 Au Duong Lan Street, Ward 3, District 8</PText>
+        <PText>314/88 Au Duong Lan Street, Ward 3, 8 District.</PText>
         <a
           className="map__card__link"
           target="_blank"

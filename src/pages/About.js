@@ -6,6 +6,7 @@ import PText from '../components/PText';
 import Button from '../components/Button';
 import ContactBanner from '../components/ContactBanner';
 import AboutInfoItem from '../components/AboutInfoItem';
+import AboutTimelineItem from '../components/AboutTimelineItem';
 // images
 import aboutImg from '../assets/images/Tuyen_3.jpg';
 
@@ -40,6 +41,7 @@ const AboutStyled = styled.div`
         }
         &__heading {
           margin-bottom: 3rem;
+          color: rgb(250, 43, 97);
           font-size: 3.6rem;
           @media only screen and (max-width: 768px) {
             font-size: 2.8rem;
@@ -71,6 +73,12 @@ const AboutStyled = styled.div`
         text-transform: uppercase;
         @media only screen and (max-width: 768px) {
           font-size: 3rem;
+        }
+      }
+      .mb-5 {
+        margin-bottom: 5rem;
+        @media only screen and (max-width: 768px) {
+          margin-bottom: 3rem;
         }
       }
       &:nth-child(2) {
@@ -148,14 +156,16 @@ const About = () => (
       </div>
       <div className="about__info__items">
         <div className="about__info__item">
-          <h1 className="about__info__item__heading">Education</h1>
-          <AboutInfoItem
-            title="School"
-            items={['Luong Van Can High School, Ho Chi Minh City.']}
-          />
-          <AboutInfoItem
+          <h1 className="about__info__item__heading mb-5">Education</h1>
+          <AboutTimelineItem
             title="Varsity"
-            items={['Sai Gon Technology University (STU).']}
+            period="2014 - 2018"
+            description="SaiGon Technology University."
+          />
+          <AboutTimelineItem
+            title="School"
+            period="2011 - 2014"
+            description="Luong Van Can High School, Ho Chi Minh City."
           />
         </div>
         <div className="about__info__item">
@@ -189,27 +199,21 @@ const About = () => (
           />
         </div>
         <div className="about__info__item">
-          <h1 className="about__info__item__heading">EXPERIENCES</h1>
-          <AboutInfoItem
-            title="11/2018 - 03/2019"
-            items={[
-              'Intern Front End Developer at M1 Studio.',
-              'Built on 1 web application for education. The client wants to create a website to establish credentials which aims at increasing online traffic and showing their professionalism as well as high quality in education..',
-            ]}
+          <h1 className="about__info__item__heading mb-5">EXPERIENCES</h1>
+          <AboutTimelineItem
+            title="City Now (Junior)"
+            period="06/2020 - 06/2021"
+            description="Built on 2 web applications for major foreign customers such as WincalX."
           />
-          <AboutInfoItem
-            title="03/2019 - 04/2020"
-            items={[
-              'Fresher/Junior Front End Developer at Wee Digital.',
-              'I have built on more than 4 web applications for major domestic and foreign customers such as Viettinbank, ABBank, VinMart, Wee ...',
-            ]}
+          <AboutTimelineItem
+            title="Wee Digital (Fresher)"
+            period="03/2019 - 04/2020"
+            description="Have built on more than 4 web applications for major domestic and foreign customers such as Viettinbank, ABBank, VinMart, Wee..."
           />
-          <AboutInfoItem
-            title="06/2020 - Now"
-            items={[
-              'Junior Front End Developer at City Now.',
-              'Built on 2 web applications for major foreign customers such as WincalX.',
-            ]}
+          <AboutTimelineItem
+            title="M1 Studio (Intern)"
+            period="11/2018 - 03/2019"
+            description="Built on 1 web application for education. The client wants to create a website to establish credentials which aims at increasing online traffic and showing their professionalism as well as high quality in education..."
           />
         </div>
       </div>

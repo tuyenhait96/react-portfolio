@@ -37,8 +37,12 @@ const FooterCol = ({
     <ul>
       {links.map((link, index) => (
         <li key={index}>
-          {link.type === 'Link' ? (
+          {link.path === "Link" ? (
             <Link to={link.path}>{link.title}</Link>
+          ) : ["Facebook", "LinkedIn"].includes(link.title) ? (
+            <Link to="#" onClick={() => window.open(link.path)}>
+              {link.title}
+            </Link>
           ) : (
             <a href={link.path} rel="noreferrer">
               {link.title}
